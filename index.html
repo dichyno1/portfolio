@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for clean, high-contrast look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            /* Off-White background */
+        }
+
+        /* Hero Section Background - Dark Blue */
+        .hero-section-bg {
+            background-color: #1e3a8a;
+            /* Blue-900 equivalent */
+            background-image: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+            /* Dark Blue gradient */
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            /* Slanted bottom edge for dynamic look */
+            color: white;
+            padding-top: 2.5rem;
+            /* pt-10 */
+            padding-bottom: 8rem;
+            /* pb-32 */
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 4px;
+            background-color: #2563eb;
+            /* Blue accent underline (Blue-600) */
+            border-radius: 2px;
+        }
+
+        .card-effect {
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .card-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 30px rgba(37, 99, 235, 0.3);
+            /* Blue shadow on hover */
+        }
+    </style>
+</head>
+
+<body class="text-gray-900">
+
+    <!-- Hero Section (Header Background and Profile) -->
+    <div class="hero-section-bg">
+        <!-- Navigation Bar -->
+        <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-extrabold text-white">
+                    <span class="text-white-400">Portfolio</span>
+                </a>
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                    <a href="#skills" class="text-white-300 hover:text-blue-400 transition duration-300">Skills</a>
+                    <a href="#activities-awards"
+                        class="text-white-300 hover:text-blue-400 transition duration-300">Activities & Awards</a>
+                    <a href="#projects" class="text-white-300 hover:text-blue-400 transition duration-300">Projects</a>
+                    <a href="#contact" class="text-white-300 hover:text-blue-400 transition duration-300">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 1. คำแนะนำเกี่ยวกับตนเอง (Self-Introduction/Profile) -->
+        <section id="profile" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <!-- Profile Image -->
+                <div
+                    class="flex-shrink-0 w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-8 border-white ring-8 ring-blue-400/50">
+                    <!-- รูปภาพที่ผู้ใช้ให้มา: image_fd38c5.png -->
+                    <img src="images/Gemini_Generated_Image_wambmxwambmxwamb.png" alt="รูปภาพส่วนตัวของนักเรียน"
+                        class="w-full h-full object-cover" style="object-position: center 20%;">
+                </div>
+
+                <!-- Profile Details -->
+                <div class="text-center md:text-left pt-15 text-white">
+                    <h1 class="text-5xl sm:text-5xl font-extrabold mb-4 leading-tight">
+                        <span class="text-blue-400"></span>MR.THEERADECH KUATIP
+                    </h1>
+                    <p class="text-white leading-relaxed max-w-3xl text-xl md:text-2xl">
+                        Hello, my name is Theeradech Kuatip.
+                        <br>
+                        I am a Grade 12 student at Ranodwittaya School with a GPAX of 3.79.
+                        <br>
+                        My main interest is learning Technical Skills.
+                        <br>
+                        I hope that my portfolio will make you know me better.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20 -mt-20 relative z-10">
+
+        <!-- NEW SECTION: ทักษะและความสามารถ (Skills and Abilities) - BADGE-BASED -->
+        <section id="skills" class="space-y-12 bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+            <h2 class="text-4xl font-extrabold text-gray-900 section-title">Skills</h2>
+
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-6">
+                <!-- Skill Category 1: Hard Skills (ทักษะเชิงเทคนิค) -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <i data-lucide="code" class="w-6 h-6 mr-2"></i> Technical Skills
+                    </h3>
+
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Blue Badges for Technical Skills -->
+                        <span
+                            class="px-4 py-2 text-base font-medium bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300">Python/Coding</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2: Soft Skills & Languages (ทักษะด้านบุคคล) -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-4 flex items-center">
+                        <i data-lucide="message-square" class="w-6 h-6 mr-2"></i> Soft Skills & Languages
+                    </h3>
+
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Purple Badges for Soft Skills -->
+                        <span
+                            class="px-4 py-2 text-base font-medium bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition duration-300">English
+                            Skills
+                            (Newbies)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. กิจกรรม (Activities) & 5. ผลงานที่ได้รับ (Awards/Achievements) -->
+        <section id="activities-awards" class="space-y-12">
+            <h2 class="text-4xl font-extrabold text-gray-900 section-title">กิจกรรม และ ผลงานที่ได้รับ</h2>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Activities (กิจกรรม) -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6 flex items-center">
+                        <i data-lucide="users" class="w-5 h-5 mr-2 text-blue-600"></i> ประสบการณ์/กิจกรรม
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Activity Item 1 (พร้อมภาพประกอบ 1) -->
+                        <div class="bg-white p-6 rounded-xl shadow-2xl border-l-4 border-blue-500 card-effect">
+                            <div class="flex justify-between items-start mb-2">
+                                <p class="text-lg font-semibold text-blue-600">ตำแหน่ง: [เช่น หัวหน้าโครงการ]</p>
+                                <p class="text-sm text-gray-500 font-medium">[เดือน ปี] - [เดือน ปี]</p>
+                            </div>
+                            <p class="text-xl font-bold text-gray-900 my-1">ชื่อกิจกรรม: [ระบุชื่อเต็มของกิจกรรม]</p>
+                            <p class="text-gray-700 text-sm mt-3">หน้าที่และความรับผิดชอบ: [อธิบายบทบาทสั้นๆ
+                                และผลลัพธ์ที่สำคัญที่ได้เรียนรู้]</p>
+                            <!-- Placeholder for Activity Image 1 -->
+                            <div class="mt-4 overflow-hidden rounded-lg shadow-inner">
+                                <img src="https://placehold.co/400x150/dbeafe/1e40af?text=[รูปภาพ\nกิจกรรม\n1]" alt=""
+                                    class="w-full h-24 object-cover"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x150/dbeafe/1e40af?text=[รูปภาพ\nกิจกรรม\n1]';">
+                            </div>
+                        </div>
+
+                        <!-- Activity Item 2 (พร้อมภาพประกอบ 2) -->
+                        <div class="bg-white p-6 rounded-xl shadow-2xl border-l-4 border-gray-500 card-effect">
+                            <div class="flex justify-between items-start mb-2">
+                                <p class="text-lg font-semibold text-gray-600">ตำแหน่ง: [เช่น อาสาสมัคร]</p>
+                                <p class="text-sm text-gray-500 font-medium">[เดือน ปี]</p>
+                            </div>
+                            <p class="text-xl font-bold text-gray-900 my-1">ชื่อกิจกรรม: [ระบุชื่อเต็มของกิจกรรม]</p>
+                            <p class="text-gray-700 text-sm mt-3">หน้าที่และความรับผิดชอบ: [อธิบายบทบาทสั้นๆ
+                                และทักษะที่นำไปใช้]</p>
+                            <!-- Placeholder for Activity Image 2 -->
+                            <div class="mt-4 overflow-hidden rounded-lg shadow-inner">
+                                <img src="https://placehold.co/400x150/e5e7eb/6b7280?text=[รูปภาพ\nกิจกรรม\n2]" alt=""
+                                    class="w-full h-24 object-cover"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x150/e5e7eb/6b7280?text=[รูปภาพ\nกิจกรรม\n2]';">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards (ผลงานที่ได้รับ) -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6 flex items-center">
+                        <i data-lucide="trophy" class="w-5 h-5 mr-2 text-yellow-500"></i> ผลงานที่ได้รับ / ความสำเร็จ
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Award Item 1 (พร้อมภาพประกอบ 1) -->
+                        <div class="bg-white p-6 rounded-xl shadow-2xl card-effect border-l-4 border-yellow-500">
+                            <p class="text-lg font-semibold text-yellow-700">รางวัล: [ชื่อรางวัลที่ได้รับ]</p>
+                            <p class="text-md text-gray-900 my-1">จาก: [หน่วยงานที่มอบรางวัล]</p>
+                            <p class="text-sm text-gray-500 mb-2">ปีที่ได้รับ: [ปี]</p>
+                            <p class="text-gray-700 text-sm">รายละเอียด: [อธิบายความสำคัญของรางวัลสั้นๆ]</p>
+                            <!-- Placeholder for Award Image 1 -->
+                            <div class="mt-4 overflow-hidden rounded-lg shadow-inner">
+                                <img src="https://placehold.co/400x150/fffbeb/b45309?text=[รูปภาพ\nผลงาน]" alt=""
+                                    class="w-full h-24 object-cover"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/400x150/fffbeb/b45309?text=[รูปภาพ\nผลงาน]';">
+                            </div>
+                        </div>
+                        <!-- Award Item 2 -->
+                        <div class="bg-white p-6 rounded-xl shadow-2xl card-effect border-l-4 border-yellow-400">
+                            <p class="text-lg font-semibold text-yellow-700">ประกาศนียบัตร: [ชื่อใบรับรอง/Certificate]
+                            </p>
+                            <p class="text-md text-gray-900 my-1">จาก: [สถาบัน/แพลตฟอร์ม]</p>
+                            <p class="text-sm text-gray-500 mb-2">ปีที่ได้รับ: [ปี]</p>
+                            <p class="text-gray-700 text-sm">รายละเอียด: [ทักษะที่ได้รับการรับรอง]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Project ส่วนตัว (Personal Projects) -->
+        <section id="projects" class="space-y-12">
+            <h2 class="text-4xl font-extrabold text-gray-900 section-title">Project ส่วนตัว (ผลงาน)</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project Item 1 (พร้อมภาพประกอบ 1) -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden card-effect border-t-4 border-blue-500">
+                    <!-- Project Image Placeholder 1 -->
+                    <img src="https://placehold.co/600x300/dbeafe/1e40af?text=[รูปภาพ\nProject 1]" alt=""
+                        class="w-full h-48 object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x300/dbeafe/1e40af?text=[รูปภาพ\nProject 1]';">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            [ชื่อ Project 1]
+                        </h3>
+                        <p class="text-sm text-blue-600 mb-3 font-semibold">[เทคโนโลยีที่ใช้]</p>
+                        <p class="text-gray-700 text-sm line-clamp-3">
+                            อธิบาย Project: [สรุปสั้นๆ เกี่ยวกับปัญหาที่แก้ไข, วิธีการ, และผลลัพธ์ของ Project นี้]
+                        </p>
+                        <a href="https://github.com/topics/projects" target="_blank"
+                            class="mt-4 inline-flex items-center text-blue-600 hover:text-blue-800 transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden card-effect border-t-4 border-gray-500">
+                    <img src="https://placehold.co/600x300/e5e7eb/6b7280?text=[รูปภาพ\nProject 2]" alt=""
+                        class="w-full h-48 object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x300/e5e7eb/6b7280?text=[รูปภาพ\nProject 2]';">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            [ชื่อ Project 2]
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-3 font-semibold">[เทคโนโลยีที่ใช้]</p>
+                        <p class="text-gray-700 text-sm line-clamp-3">
+                            อธิบาย Project: [สรุปสั้นๆ เกี่ยวกับเป้าหมาย, กลยุทธ์ที่ใช้, และตัวชี้วัดความสำเร็จ (KPI)
+                            ของ Project นี้]
+                        </p>
+                        <a href="https://www.canva.com/th_th/create/reports/" target="_blank"
+                            class="mt-4 inline-flex items-center text-gray-600 hover:text-gray-800 transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden card-effect border-t-4 border-blue-700">
+                    <img src="https://placehold.co/600x300/1e40af/bfdbfe?text=[รูปภาพ\nProject 3]" alt=""
+                        class="w-full h-48 object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x300/1e40af/bfdbfe?text=[รูปภาพ\nProject 3]';">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            [ชื่อ Project 3]
+                        </h3>
+                        <p class="text-sm text-blue-700 mb-3 font-semibold">[เทคโนโลยีที่ใช้]</p>
+                        <p class="text-gray-700 text-sm line-clamp-3">
+                            อธิบาย Project: [สรุปสั้นๆ เกี่ยวกับกระบวนการออกแบบ, แรงบันดาลใจ, และการนำไปใช้งาน Project
+                            นี้]
+                        </p>
+                        <a href="https://www.behance.net/search/projects/design%20portfolio" target="_blank"
+                            class="mt-4 inline-flex items-center text-blue-700 hover:text-blue-900 transition duration-300 font-medium text-sm">
+                            ดูรายละเอียด <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. ช่องทางการติดต่อ (Contact Channels) -->
+        <section id="contact" class="bg-purple-700 p-8 md:p-12 rounded-xl shadow-2xl text-white mt-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4 text-white">Contact Me</h2>
+                <p class="text-purple-200 mb-10 text-lg">
+                    if you want to contact me, please use the following channels.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Email -->
+                    <a href="mailto:theeradechkuatip@gmail.com"
+                        class="bg-white text-gray-900 px-6 py-3 rounded-full shadow-lg hover:bg-purple-100 hover:text-purple-700 transition duration-300 flex items-center space-x-2 font-bold text-lg">
+                        <i data-lucide="mail" class="w-5 h-5"></i> <span>theeradechkuatip@gmail.com</span>
+                    </a>
+                    <!-- Phone -->
+                    <a href="tel:0967201232"
+                        class="bg-white text-gray-900 px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 hover:text-blue-700 transition duration-300 flex items-center space-x-2 font-bold text-lg">
+                        <i data-lucide="phone" class="w-5 h-5"></i> <span>66+ 0967201232</span>
+                    </a>
+                    <!-- Social Icons -->
+                    <a href="https://www.instagram.com/thrxtax._/" target="_blank"
+                        class="bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 text-white p-3 rounded-full shadow-md hover:opacity-90 transition duration-300">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://github.com/dichyno1/diogenusmath" target="_blank"
+                        class="bg-gray-700 text-white p-3 rounded-full shadow-md hover:bg-gray-800 transition duration-300"><i
+                            data-lucide="github" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-5 mt-10">
+        <p class="text-sm">&copy; <span id="current-year"></span> this website is created by Theeradech Kuatip</p>
+    </footer>
+
+    <!-- Script for Lucide Icons, Year, and Firebase (Required Boilerplate) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+        // 1. Initialize Firebase (Required Boilerplate)
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        if (firebaseConfig) {
+            try {
+                const app = initializeApp(firebaseConfig);
+                const auth = getAuth(app);
+                // Auth check and sign-in
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                    console.log("Signed in with custom token.");
+                } else {
+                    await signInAnonymously(auth);
+                    console.log("Signed in anonymously.");
+                }
+            } catch (error) {
+                console.error("Firebase Initialization or Sign-in Failed:", error);
+            }
+        }
+
+        // 2. Lucide Icons rendering
+        lucide.createIcons();
+
+        // 3. Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
